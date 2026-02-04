@@ -5,13 +5,13 @@
 class Briefkit < Formula
   desc "Local orchestration tool for subscription-based coding CLIs"
   homepage "https://github.com/orbiqd/orbiqd-briefkit"
-  version "0.5.0"
+  version "0.5.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/orbiqd/orbiqd-briefkit/releases/download/v0.5.0/briefkit_0.5.0_darwin_amd64.zip"
-      sha256 "6d14d75a7652a3eb850cbfd9175979cd4cabdfe8043e2707345fa7f836a76c39"
+      url "https://github.com/orbiqd/orbiqd-briefkit/releases/download/v0.5.1/briefkit_0.5.1_darwin_amd64.zip"
+      sha256 "2f03f520b7643885d4ea989e0391ecfb5611ccfcd6028911ba8cbe9c363759de"
 
       def install
         bin.install "briefkit-ctl"
@@ -20,8 +20,8 @@ class Briefkit < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/orbiqd/orbiqd-briefkit/releases/download/v0.5.0/briefkit_0.5.0_darwin_arm64.zip"
-      sha256 "b1480e6aa25f1e3ffc078ccde2a018b9f7938aeb8501be5d5f5cebd9aca628ff"
+      url "https://github.com/orbiqd/orbiqd-briefkit/releases/download/v0.5.1/briefkit_0.5.1_darwin_arm64.zip"
+      sha256 "afc3b4f61d3dff1b7caabd8f1db0085b90803c04196272565ec0a1feb167569d"
 
       def install
         bin.install "briefkit-ctl"
@@ -33,8 +33,8 @@ class Briefkit < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/orbiqd/orbiqd-briefkit/releases/download/v0.5.0/briefkit_0.5.0_linux_amd64.tar.gz"
-      sha256 "99ec78a4a902e4e723ad80aaf011c64849d47605cd03dee824ac842d40fc1428"
+      url "https://github.com/orbiqd/orbiqd-briefkit/releases/download/v0.5.1/briefkit_0.5.1_linux_amd64.tar.gz"
+      sha256 "afe7cd06691aa2a38f71c00d242bbb9fb6e0db7ab331f366632089711007f72b"
       def install
         bin.install "briefkit-ctl"
         bin.install "briefkit-mcp"
@@ -42,8 +42,8 @@ class Briefkit < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/orbiqd/orbiqd-briefkit/releases/download/v0.5.0/briefkit_0.5.0_linux_arm64.tar.gz"
-      sha256 "afef594f86b7099376429d70b4c4e2d074e1f73a34f43f820eb172e227e4a6a4"
+      url "https://github.com/orbiqd/orbiqd-briefkit/releases/download/v0.5.1/briefkit_0.5.1_linux_arm64.tar.gz"
+      sha256 "188bcea5e22194e33555819d4d2e0a1ab85b62539b81ba59cebb53a8e540af38"
       def install
         bin.install "briefkit-ctl"
         bin.install "briefkit-mcp"
