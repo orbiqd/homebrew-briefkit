@@ -5,25 +5,25 @@
 class Briefkit < Formula
   desc "Local orchestration tool for subscription-based coding CLIs"
   homepage "https://github.com/orbiqd/orbiqd-briefkit"
-  version "0.5.2"
+  version "0.6.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/orbiqd/orbiqd-briefkit/releases/download/v0.5.2/briefkit_0.5.2_darwin_amd64.zip"
-      sha256 "6300cdcfee240a0359e8c513c9a79da80dac56e52668818f4256e6c24defd01a"
+      url "https://github.com/orbiqd/orbiqd-briefkit/releases/download/v0.6.0/briefkit_0.6.0_darwin_amd64.zip"
+      sha256 "f62dac688efb26aedcf19c1268e6ca281002f326754dcc644e71271661825566"
 
-      def install
+      define_method(:install) do
         bin.install "briefkit-ctl"
         bin.install "briefkit-mcp"
         bin.install "briefkit-runner"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/orbiqd/orbiqd-briefkit/releases/download/v0.5.2/briefkit_0.5.2_darwin_arm64.zip"
-      sha256 "4890d3816e934f0c52ac58f9b9632c669de28f45c13714ee992d514361133c7d"
+      url "https://github.com/orbiqd/orbiqd-briefkit/releases/download/v0.6.0/briefkit_0.6.0_darwin_arm64.zip"
+      sha256 "64a3cbe6bb9d720441e5b25a447be58330e69d687418bdf3e3d51349d00f0c0f"
 
-      def install
+      define_method(:install) do
         bin.install "briefkit-ctl"
         bin.install "briefkit-mcp"
         bin.install "briefkit-runner"
@@ -33,18 +33,18 @@ class Briefkit < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/orbiqd/orbiqd-briefkit/releases/download/v0.5.2/briefkit_0.5.2_linux_amd64.tar.gz"
-      sha256 "481435fb57582a5dea9a1486e6c21c67008cd10b0018eae10372a47ab690ed1d"
-      def install
+      url "https://github.com/orbiqd/orbiqd-briefkit/releases/download/v0.6.0/briefkit_0.6.0_linux_amd64.tar.gz"
+      sha256 "7d3d7f4abd53f7d23cecf7335856f35c6a187f481c161e61f7b659b74f988356"
+      define_method(:install) do
         bin.install "briefkit-ctl"
         bin.install "briefkit-mcp"
         bin.install "briefkit-runner"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/orbiqd/orbiqd-briefkit/releases/download/v0.5.2/briefkit_0.5.2_linux_arm64.tar.gz"
-      sha256 "6359bbd19f5f92c44cbeca2f7ffa24a4620d3d921ecb3e374d8daeca663b8a15"
-      def install
+      url "https://github.com/orbiqd/orbiqd-briefkit/releases/download/v0.6.0/briefkit_0.6.0_linux_arm64.tar.gz"
+      sha256 "dd9cab7153fdf0c311885e0b0ba27ad1bd4aac56a98bdfe3908a43835edef3b8"
+      define_method(:install) do
         bin.install "briefkit-ctl"
         bin.install "briefkit-mcp"
         bin.install "briefkit-runner"
